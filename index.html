@@ -17,9 +17,11 @@
       content="Веборієнтована інформаційна система дистанційного навчання з інтеграцією особистого кабінету."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Teachio" />
     <meta property="og:locale" content="uk_UA" />
     <meta property="og:url" content="https://teachio.com/" />
     <meta property="og:image" content="https://teachio.com/assets/icons/android-chrome-512x512.png" />
+    <meta property="og:image:alt" content="Схема платформи дистанційного навчання для бакалаврської роботи" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Бакалаврська робота | Teachio" />
@@ -40,28 +42,103 @@
 
     <title>Бакалаврська робота | Teachio</title>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Teachio",
+            "url": "https://teachio.com/",
+            "inLanguage": "uk-UA"
+          },
+          {
+            "@type": "Thesis",
+            "name": "Веборієнтована інформаційна система дистанційного навчання з інтеграцією особистого кабінету",
+            "author": {
+              "@type": "Person",
+              "name": "Михайло Колпаков"
+            },
+            "datePublished": "2026-03-20",
+            "inLanguage": "uk-UA",
+            "url": "https://teachio.com/",
+            "about": ["distance learning", "REST API", "MediatR", "MS SQL Server", "Serilog"]
+          }
+        ]
+      }
+    </script>
+
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main-content">Перейти до основного контенту</a>
+
+    <header class="site-header" aria-labelledby="hero-title">
       <div class="container">
         <p class="site-tag">Бакалаврська робота 2026</p>
-        <h1>Веборієнтована інформаційна система дистанційного навчання</h1>
+        <h1 id="hero-title">Веборієнтована інформаційна система дистанційного навчання</h1>
         <p class="site-subtitle">
           Проєкт з інтеграцією особистого кабінету для студентів, викладачів та адміністраторів.
         </p>
+
+        <nav class="hero-nav" aria-label="Навігація по секціях сторінки">
+          <ul>
+            <li><a href="#about" aria-current="page">Про проєкт</a></li>
+            <li><a href="#architecture">Архітектура</a></li>
+            <li><a href="#results">Результати</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <main id="main-content" class="container">
-      <section aria-labelledby="about-title">
-        <h2 id="about-title">Про проєкт</h2>
-        <p>
-          Цей лендинг презентує ключову ідею, архітектурні підходи та практичну цінність бакалаврської роботи на тему
-          розвитку backend-рішення для платформи онлайн-навчання.
-        </p>
-      </section>
+    <main id="main-content" class="container" aria-label="Основний контент лендингу">
+      <article aria-labelledby="about-title" aria-describedby="about-summary">
+        <section id="about" aria-labelledby="about-title">
+          <h2 id="about-title">Про проєкт</h2>
+          <p id="about-summary">
+            Цей лендинг презентує ключову ідею, архітектурні підходи та практичну цінність бакалаврської роботи на тему
+            розвитку backend-рішення для платформи онлайн-навчання.
+          </p>
+        </section>
+
+        <section id="architecture" aria-labelledby="architecture-title">
+          <h2 id="architecture-title">Архітектура рішення</h2>
+          <h3>Серверна частина</h3>
+          <p>
+            У роботі застосовано N-Layer підхід та MediatR для чіткого розподілу відповідальностей між командами,
+            запитами та інфраструктурними компонентами.
+          </p>
+
+          <figure>
+            <img
+              src="/assets/images/architecture-overview.svg"
+              width="1200"
+              height="630"
+              alt="Схематична взаємодія UI клієнта, REST API та бази даних у системі дистанційного навчання"
+            />
+            <figcaption>Узагальнена схема взаємодії клієнтського інтерфейсу, API та шару збереження даних.</figcaption>
+          </figure>
+
+          <h3>Технологічний стек</h3>
+          <ul aria-label="Перелік ключових технологій">
+            <li>ASP.NET Core</li>
+            <li>Entity Framework Core</li>
+            <li>MS SQL Server</li>
+            <li>MediatR</li>
+            <li>Serilog</li>
+          </ul>
+        </section>
+
+        <section id="results" aria-labelledby="results-title">
+          <h2 id="results-title">Очікувані результати</h2>
+          <h3>Практична цінність</h3>
+          <p>
+            Результатом є модульний та масштабований backend-прототип освітньої платформи, готовий до інтеграції з
+            frontend-рішеннями та подальшого розширення.
+          </p>
+        </section>
+      </article>
     </main>
 
     <footer class="site-footer">
