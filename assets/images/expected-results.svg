@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Очікувані результати впровадження</title>
+  <desc id="desc">Інфографіка очікуваних результатів: швидкодія, масштабованість, надійність, зручність адміністрування та готовність до розширення.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fdf8ef"/>
+      <stop offset="100%" stop-color="#fff1da"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#c06e00" flood-opacity="0.20"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="640" fill="url(#bg)"/>
+  <circle cx="1020" cy="120" r="170" fill="#ffe4bd"/>
+  <circle cx="180" cy="550" r="140" fill="#ffe9c9"/>
+
+  <g font-family="Segoe UI, Tahoma, sans-serif" fill="#4a2a02">
+    <text x="80" y="95" font-size="42" font-weight="700">Очікувані результати</text>
+    <text x="80" y="132" font-size="22" fill="#7a4e17">Цільові показники якості та ефективності системи</text>
+  </g>
+
+  <g filter="url(#shadow)" font-family="Segoe UI, Tahoma, sans-serif">
+    <rect x="80" y="190" width="320" height="150" rx="18" fill="#fffdfa" stroke="#f3c78a"/>
+    <text x="108" y="230" font-size="18" font-weight="700" fill="#6e3e03">Швидкодія API</text>
+    <text x="108" y="270" font-size="48" font-weight="700" fill="#d97706">&lt; 250 мс</text>
+    <text x="108" y="300" font-size="14" fill="#8a602b">Середній час відповіді основних запитів</text>
+
+    <rect x="440" y="190" width="320" height="150" rx="18" fill="#fffdfa" stroke="#f3c78a"/>
+    <text x="468" y="230" font-size="18" font-weight="700" fill="#6e3e03">Надійність сервісу</text>
+    <text x="468" y="270" font-size="48" font-weight="700" fill="#d97706">99.5%</text>
+    <text x="468" y="300" font-size="14" fill="#8a602b">Цільова доступність у навчальний період</text>
+
+    <rect x="800" y="190" width="320" height="150" rx="18" fill="#fffdfa" stroke="#f3c78a"/>
+    <text x="828" y="230" font-size="18" font-weight="700" fill="#6e3e03">Масштабованість</text>
+    <text x="828" y="270" font-size="48" font-weight="700" fill="#d97706">10k+</text>
+    <text x="828" y="300" font-size="14" fill="#8a602b">Потенційна кількість активних користувачів</text>
+  </g>
+
+  <g font-family="Segoe UI, Tahoma, sans-serif" fill="#5d3a08">
+    <rect x="80" y="390" width="1040" height="170" rx="20" fill="#fffdf9" stroke="#f3c78a"/>
+    <text x="110" y="435" font-size="24" font-weight="700">Практичні результати для освітньої установи</text>
+    <text x="110" y="475" font-size="18">• Скорочення часу адміністрування курсів і користувачів</text>
+    <text x="110" y="505" font-size="18">• Підвищення стабільності взаємодії між ролями системи</text>
+    <text x="110" y="535" font-size="18">• Готовність платформи до інтеграції з мобільним або вебклієнтом</text>
+  </g>
+
+  <rect x="80" y="157" width="240" height="8" rx="4" fill="url(#accent)"/>
+</svg>
