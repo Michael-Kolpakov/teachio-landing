@@ -185,17 +185,24 @@ figure {
   border-radius: 0.85rem;
   overflow: hidden;
   border: 1px solid var(--border);
+  background: #f6fbfd;
 }
 
 figure img {
   width: 100%;
   height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.content-image {
+  aspect-ratio: auto;
 }
 
 figcaption {
   padding: 0.75rem 1rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 0.88rem + 0.12vw, 0.98rem);
   background: #ffffff;
 }
 
@@ -233,6 +240,10 @@ section li + li {
 }
 
 @media (max-width: 760px) {
+  .site-header {
+    padding: 2.8rem 0 1.2rem;
+  }
+
   section {
     padding: 1.1rem;
   }
@@ -240,5 +251,17 @@ section li + li {
   #goals ul,
   #results ul {
     padding-left: 1.6rem;
+  }
+
+  .hero-nav ul {
+    gap: 0.55rem;
+  }
+
+  .hero-nav a {
+    font-size: 0.92rem;
+  }
+
+  figcaption {
+    padding: 0.65rem 0.75rem;
   }
 }
