@@ -5,6 +5,8 @@
   --muted: #52606d;
   --accent: #0b7285;
   --accent-soft: #dff4f7;
+  --accent-strong: #0d4f61;
+  --warm-soft: #fff4df;
   --border: #e4e7eb;
 }
 
@@ -12,6 +14,7 @@ body {
   background: radial-gradient(circle at top right, #e6f7fa, transparent 50%), var(--bg);
   color: var(--text);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.55;
 }
 
 .skip-link {
@@ -84,6 +87,13 @@ h1 {
   border-radius: 0.5rem;
   border: 1px solid var(--border);
   background: #ffffffa1;
+  font-weight: 600;
+}
+
+.hero-nav a:hover,
+.hero-nav a:focus-visible {
+  border-color: var(--accent);
+  background: #ffffff;
 }
 
 main {
@@ -100,6 +110,7 @@ section {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1rem;
+  box-shadow: 0 10px 30px -25px rgba(17, 36, 64, 0.45);
 }
 
 h2 {
@@ -111,6 +122,43 @@ h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-size: 1.05rem;
+}
+
+p + p {
+  margin-top: 0.75rem;
+}
+
+#relevance,
+#goals,
+#methodology,
+#results,
+#contacts {
+  position: relative;
+  overflow: hidden;
+}
+
+#relevance::before,
+#goals::before,
+#methodology::before,
+#results::before,
+#contacts::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--accent), #4ea5b3);
+  opacity: 0.22;
+}
+
+#goals ul,
+#results ul {
+  margin-top: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.9rem 1rem 0.9rem 2rem;
+  background: #fbfeff;
 }
 
 figure {
@@ -132,6 +180,22 @@ figcaption {
   background: #ffffff;
 }
 
+#contacts {
+  background: linear-gradient(135deg, #fbfeff, var(--warm-soft));
+}
+
+#contacts a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+  text-decoration-thickness: 0.08rem;
+}
+
+#contacts a:hover,
+#contacts a:focus-visible {
+  color: var(--accent);
+}
+
 section ul {
   list-style: disc;
   padding-left: 1.15rem;
@@ -147,4 +211,15 @@ section li + li {
   border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+@media (max-width: 760px) {
+  section {
+    padding: 1.1rem;
+  }
+
+  #goals ul,
+  #results ul {
+    padding-left: 1.6rem;
+  }
 }
