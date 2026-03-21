@@ -55,9 +55,28 @@ body {
   padding: 4rem 0 2rem;
 }
 
+.header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.uni-brand {
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+.uni-brand img {
+  width: clamp(44px, 6vw, 56px);
+  height: auto;
+  display: block;
+}
+
 .site-tag {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
   background: var(--accent-soft);
@@ -81,6 +100,14 @@ h1 {
   max-width: 62ch;
   color: var(--muted);
   font-size: clamp(1.02rem, 0.95rem + 0.25vw, 1.18rem);
+}
+
+.work-title-en {
+  margin-top: 0.65rem;
+  color: var(--accent-strong);
+  font-size: clamp(0.98rem, 0.9rem + 0.28vw, 1.12rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .hero-nav {
@@ -141,6 +168,14 @@ p + p {
   margin-top: 0.75rem;
 }
 
+.short-abstract {
+  margin-bottom: 0.75rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: #f7fcfd;
+}
+
 p,
 li,
 figcaption {
@@ -148,6 +183,7 @@ figcaption {
 }
 
 #relevance,
+#keywords,
 #goals,
 #methodology,
 #results,
@@ -157,6 +193,7 @@ figcaption {
 }
 
 #relevance::before,
+#keywords::before,
 #goals::before,
 #methodology::before,
 #results::before,
@@ -178,6 +215,24 @@ figcaption {
   border-radius: 0.75rem;
   padding: 0.9rem 1rem 0.9rem 2rem;
   background: #fbfeff;
+}
+
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding-left: 0;
+  margin-top: 0.3rem;
+}
+
+.keyword-list li {
+  list-style: none;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #c8deea;
+  background: #f4fbff;
+  color: #315772;
+  font-size: 0.92em;
 }
 
 figure {
@@ -242,6 +297,18 @@ section li + li {
 @media (max-width: 760px) {
   .site-header {
     padding: 2.8rem 0 1.2rem;
+  }
+
+  .header-meta {
+    align-items: flex-start;
+  }
+
+  .uni-brand {
+    margin-bottom: 0;
+  }
+
+  .uni-brand img {
+    width: clamp(35px, 9vw, 48px);
   }
 
   section {
